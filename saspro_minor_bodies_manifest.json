@@ -1,0 +1,34 @@
+{
+  "schema_version": 1,
+  "version": "V1.0.0",
+  "generated_utc": "2025-12-08T00:23:04.209986+00:00",
+
+  "download": {
+    "url": "https://github.com/setiastro/saspro-minorbody-data/releases/download/V1.0.0/saspro_minor_bodies.sqlite",
+    "filename": "saspro_minor_bodies.sqlite"
+  },
+
+  "source": {
+    "mpcorb": {
+      "url": "https://www.minorplanetcenter.net/iau/MPCORB/MPCORB.DAT",
+      "local_filename": "MPCORB.DAT"
+    },
+    "allcomets": {
+      "url": "https://www.minorplanetcenter.net/iau/MPCORB/AllCometEls.txt",
+      "local_filename": "AllCometEls.txt"
+    }
+  },
+
+  "output": {
+    "sqlite_db": "saspro_minor_bodies.sqlite"
+  },
+
+  "counts": {
+    "asteroids": 1481591,
+    "comets": 4617
+  },
+
+  "mpc_notes": "Orbital elements and related parameters provided by the Minor Planet Center. See MPC documentation for MPCORB and comet orbit formats.",
+
+  "mpcorb_latest_epoch_packed": null
+}
