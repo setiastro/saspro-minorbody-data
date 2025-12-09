@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "version": "V1.0.0",
-  "generated_utc": "2025-12-09T20:01:26.883848+00:00",
+  "generated_utc": "2025-12-09T20:24:52.065925+00:00",
   "download": {
     "url": "https://github.com/setiastro/saspro-minorbody-data/releases/download/V1.0.0/saspro_minor_bodies.sqlite",
     "filename": "saspro_minor_bodies.sqlite"
