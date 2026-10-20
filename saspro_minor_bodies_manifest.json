@@ -1,28 +1,65 @@
 {
-  "schema_version": 1,
-  "version": "V1.0.1",
-  "generated_utc": "2026-04-15T17:55:00.579978+00:00",
+  "schema_version": 2,
+  "version": "V2.20261020",
+  "generated_utc": "2026-10-20T13:34:35.473907+00:00",
   "download": {
-    "url": "https://github.com/setiastro/saspro-minorbody-data/releases/download/V1.0.1/saspro_minor_bodies.sqlite",
+    "url": "https://github.com/setiastro/saspro-minorbody-data/releases/download/V2.20261020/saspro_minor_bodies.sqlite",
     "filename": "saspro_minor_bodies.sqlite"
   },
   "source": {
     "mpcorb": {
-      "url": "https://www.minorplanetcenter.net/iau/MPCORB/MPCORB.DAT",
-      "local_filename": "MPCORB.DAT"
+      "url": "https://minorplanetcenter.net/iau/MPCORB/MPCORB.DAT",
+      "filename": "MPCORB.DAT",
+      "size_bytes": 319834129,
+      "modified_utc": "2026-10-20T13:18:10.847584+00:00",
+      "sha256": "9006881ef53b658ff88e22918647ed3aa2608520b5acbfd2e867539e25208a85"
     },
     "allcomets": {
-      "url": "https://www.minorplanetcenter.net/iau/MPCORB/AllCometEls.txt",
-      "local_filename": "AllCometEls.txt"
+      "url": "https://minorplanetcenter.net/iau/MPCORB/AllCometEls.txt",
+      "filename": "AllCometEls.txt",
+      "size_bytes": 787424,
+      "modified_utc": "2026-10-20T13:16:12.668164+00:00",
+      "sha256": "4e91aadafedde55d2e7a724731b7ac8bda4dbc5ebcb464c930c1f8f5a519350d"
     }
   },
   "output": {
     "sqlite_db": "saspro_minor_bodies.sqlite"
   },
   "counts": {
-    "asteroids": 1520218,
-    "comets": 4634
+    "asteroids": 1575558,
+    "comets": 4656,
+    "asteroids_usable": 1575526,
+    "comets_usable": 1953
   },
-  "mpc_notes": "Orbital elements and related parameters provided by the Minor Planet Center. See MPC documentation for MPCORB and comet orbit formats.",
-  "mpcorb_latest_epoch_packed": "K2669"
+  "comet_conversion": {
+    "converted": 1953,
+    "usable": 1953,
+    "unusable": 2703,
+    "eccentricity_bands": {
+      "e < 0.9 (clean elliptical)": 971,
+      "0.9 <= e < 0.99": 292,
+      "0.99 <= e < 1.0 (near-parabolic)": 690,
+      "e >= 1.0 (parabolic / hyperbolic)": 2697,
+      "e not finite": 6
+    }
+  },
+  "asteroid_validation": {
+    "unusable": 32
+  },
+  "epoch_freshness": {
+    "asteroids": {
+      "median_days": 133.0,
+      "p90_days": 133.0,
+      "max_days": 30722.0,
+      "within_90_days_pct": 0.0
+    },
+    "comets": {
+      "median_days": 2257.0,
+      "p90_days": 18347.199999999997,
+      "max_days": 673827.0,
+      "within_90_days_pct": 2.61136712749616
+    }
+  },
+  "mpcorb_latest_epoch_packed": "which",
+  "mpc_notes": "Orbital elements and related parameters provided by the Minor Planet Center. Comet perihelion elements are converted to mean-anomaly form at build time; parabolic and hyperbolic orbits (e >= 1) are retained but flagged two_body_ok=0."
 }
